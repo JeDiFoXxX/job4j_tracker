@@ -12,7 +12,7 @@ public class College {
         student.setGroup(35);
         student.setDate(new Date(17, 4, 29));
 
-        System.out.printf("%s %s %s\n№ group - %d\nDate of receipt - %s", student.getName(), student.getLastName(),
+        System.out.printf("%s %s %s%n№ group - %d%nDate of receipt - %s", student.getName(), student.getLastName(),
                             student.getPatronymic(), student.getGroup(), student.getDate());
     }
 }
