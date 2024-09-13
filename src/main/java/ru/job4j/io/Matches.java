@@ -14,16 +14,16 @@ public class Matches {
             int matches = Integer.parseInt(input.nextLine());
             if ((matches < 1 || matches > 3) && count >= matches) {
                 System.out.println("Введено некорректное число!!!");
-                continue;
-            }
-            count -= matches;
-            turn = !turn;
-            System.out.printf("На столе осталось: %d спичек%n", count);
-        }
-        if (!turn) {
-            System.out.println("Выиграл первый игрок");
-        } else {
-            System.out.println("Выиграл второй игрок");
+            } else {
+                count -= matches;
+                turn = !turn;
+                System.out.printf("На столе осталось: %d спичек%n", count);
+                }
+                if (!turn) {
+                System.out.println("Выиграл первый игрок");
+                } else {
+                System.out.println("Выиграл второй игрок");
+                }
         }
     }
 }
