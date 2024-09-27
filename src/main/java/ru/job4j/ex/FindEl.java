@@ -6,10 +6,10 @@ public class FindEl {
         for (int index = 0; index < value.length; index++) {
             if (value[index].equals(key)) {
                 result = index;
-                break;
-            } else {
-                throw new ElementNotFoundException("The element was not found");
             }
+        }
+        if (result == -1) {
+            throw new ElementNotFoundException("The element was not found");
         }
         return result;
     }
