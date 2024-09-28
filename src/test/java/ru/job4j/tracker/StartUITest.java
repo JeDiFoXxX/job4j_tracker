@@ -184,4 +184,26 @@ class StartUITest {
                         + "=== Завершение программы ===" + ln
         );
     }
+
+    @Test
+    void whenInvalidExit() {
+        Output output = new StubOutput();
+        Tracker tracker = new Tracker();
+        Input input = new MockInput(
+                new String[]{"10", "0"}
+        );
+        UserAction[] actions = new UserAction[]{
+                new ExitAction(output)
+        };
+        new StartUI(output).init(input, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(output.toString()).isEqualTo(
+                "Меню:" + ln
+                        + "0. Завершить программу" + ln
+                        + "Неверный ввод, вы можете выбрать: 0 .. 0" + ln
+                        + "Меню:" + ln
+                        + "0. Завершить программу" + ln
+                        + "=== Завершение программы ===" + ln
+        );
+    }
 }
