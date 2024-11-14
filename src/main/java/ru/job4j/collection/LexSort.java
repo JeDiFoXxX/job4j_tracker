@@ -5,8 +5,9 @@ import java.util.Comparator;
 public class LexSort implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
-        String leftNumber = left.substring(0, left.indexOf('.'));
-        String rightNumber = right.substring(0, right.indexOf('.'));
-        return Integer.compare(Integer.parseInt(leftNumber), Integer.parseInt(rightNumber));
+        return Integer.compare(
+                Integer.parseInt(left.split("\\.")[0]),
+                Integer.parseInt(right.split("\\.")[0])
+        );
     }
 }
