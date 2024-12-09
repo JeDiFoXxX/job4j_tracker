@@ -75,11 +75,12 @@ public class Car {
                 .buildVolume(2.5)
                 .buildColor("Red")
                 .build();
+        System.out.println(firstCar);
         Car secondCar = new Builder()
                 .buildBrand("Volga")
                 .buildCreated(LocalDate.of(1960, 1, 1))
                 .buildColor("Black")
                 .build();
-        System.out.println(firstCar + "\n" + secondCar);
+        System.out.println(secondCar);
     }
 }
