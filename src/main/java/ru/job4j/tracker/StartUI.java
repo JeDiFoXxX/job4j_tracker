@@ -4,7 +4,6 @@ import ru.job4j.tracker.action.*;
 import ru.job4j.tracker.input.*;
 import ru.job4j.tracker.output.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class StartUI {
@@ -48,6 +47,8 @@ public class StartUI {
                     new FindAllAction(output),
                     new FindByIdAction(output),
                     new FindByNameAction(output),
+                    new CreateManyItems(output),
+                    new DeleteAllItems(output),
                     new ExitAction(output)
             );
             new StartUI(output).init(input, tracker, actions);
